@@ -17,7 +17,7 @@ while not output_file:
 
 try:
     # Run the conversion
-     ffmpeg.input(input_file).output(output_file).run()
+     ffmpeg.input(input_file).output(output_file,acodec='copy',vcodec='copy').run()
 except ffmpeg.Error as e:
     # Print an error message
     print(f'\033[0;31m Error: {e}')
